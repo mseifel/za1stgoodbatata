@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Book.js" deffer></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/1a4268cd21.js" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <section id="landing">
+        <nav>
+            
+            <div class="nav__container">
+            <img class="logo" src="./assests/logo.png" alt="logo go here">
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="#" class="nav__link">Contact</a></li>
+                <li><a href="Book.html" class="nav__link nav__link--primary">Books</a></li>
+            </ul>
+        
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list"><a href="index.html" class="menu__link" onclick="closeMenu()">Home</a></li>
+                    <li class="menu__list"><a href="Book.html" class="menu__link" onclick="closeMenu()">Books</a></li>
+                    <li class="menu__list"><a href="index.html" class="menu__link" onclick="closeMenu()" >Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        </section>
+        <main id="books__main"> 
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="books__header"> 
+
+                        <h2 class="section__Tittle">All <span class="span__color">Books</span> </h2>
+                        <select id="filter" onchange="fillterBooks(event)">
+                        <option value="" disabled selected>Sort your view</option>
+                        <option value="HIGHTOLOW">Hight to low</option>
+                        <option value="LOWTOHIGH">Low to high</option>
+                        <option value="RATING">Rating</option>
+                        
+                        
+                    </select>
+                </div>
+
+                    <div class="books ">
+                        <i class="fas fa-spinner books__loading--spinner"></i>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+                        
+    <footer>
+        <div class="footer__container">
+           
+                <figure>
+                    <img src="./assests/logo.png" class="footer__img" alt="">
+                </figure>
+                <ul class="footer__links">
+                    
+                        <li><a href="#" class="footer__link">Home</a></li>
+                        <li><a href="#" class="footer__link">About</a></li>
+                        <li><a href="#" class="footer__link">Books</a></li>
+                        <li><a href="#" class="footer__link">Contact</a></li>
+                    </ul>
+                
+            </div>
+    
+    
+    
+    
+        </div>
+    
+     </footer>
+</body>
+</html>
